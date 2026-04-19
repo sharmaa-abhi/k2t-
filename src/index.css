@@ -10,10 +10,6 @@
   src: url(../public/fonts/Lausanne-500.woff2);
 }
 
-* {
-  margin: 0;
-  /* margin-top: 2px; */
-  padding: 0;
-  /* color: #EBECD0;
-  background-color: #302E2B; */
+body {
+ overflow-x: hidden;
 }
