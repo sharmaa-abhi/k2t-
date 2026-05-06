@@ -1,7 +1,9 @@
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
 import React, { useRef } from "react";
+
+
 
 const Agence = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -30,11 +32,16 @@ const Agence = () => {
     gsap.to(imageDiv.current, {
       scrollTrigger: {
         trigger: imageDiv.current,
-        markers: true,
+        // markers: true,
         start: "top 34.5%",
         end: "top -95%",
         pin: true,
+        pinSpacing: true,
+        pinReparent: true,
+        pinType: 'transform',
         scrub: true, // smooth scrubbing  with 1s easing
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
 
         onUpdate: (element) => {
           const imageIndex = Math.floor(
